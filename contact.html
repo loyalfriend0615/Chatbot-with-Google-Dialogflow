@@ -1,0 +1,243 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Shake Hub</title>
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+    <link href="//fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  </head>
+  <body id="home">
+<section class=" w3l-header-4">
+	<!--header-->
+	<header id="site-header">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-dark stroke">
+				<h1><a class="navbar-brand" href="index.html">
+					<span class="fa fa-book"></span> Shake Hub
+				</a></h1>
+				<!-- if logo is image enable this   
+			<a class="navbar-brand" href="#index.html">
+				<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+			</a> -->
+				<button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+					<span class="navbar-toggler-icon fa icon-close fa-times"></span>
+					
+				</button>
+	  
+				<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item @@home__active">
+							<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+						</li>
+						
+						
+							<li class="nav-item mr-2">
+								<a href="contact.html" class="btn btn-primary register d-lg-block btn-style">Contact</a>
+						</li>
+					</ul>
+				</div>
+				        <!-- toggle switch for light and dark theme -->
+						<div class="mobile-position">
+							<label class="theme-selector">
+							  <input type="checkbox" id="themeToggle">
+							  <i class="gg-sun"></i>
+							  <i class="gg-moon"></i>
+							</label>
+						  </div>
+						  <!-- //toggle switch for light and dark theme -->
+			</nav>
+		</div>
+	  </header>
+	<!--/header-->
+</section>
+<script src="assets/js/jquery-3.3.1.min.js"></script> <!-- Common jquery plugin -->
+<!--bootstrap working-->
+<script src="assets/js/bootstrap.min.js"></script>
+<!--bootstrap working//-->
+<!--/MENU-JS-->
+<script>
+	$(window).on("scroll", function () {
+	  var scroll = $(window).scrollTop();
+  
+	  if (scroll >= 80) {
+		$("#site-header").addClass("nav-fixed");
+	  } else {
+		$("#site-header").removeClass("nav-fixed");
+	  }
+	});
+  
+	//Main navigation Active Class Add Remove
+	$(".navbar-toggler").on("click", function () {
+	  $("header").toggleClass("active");
+	});
+	$(document).on("ready", function () {
+	  if ($(window).width() > 991) {
+		$("header").removeClass("active");
+	  }
+	  $(window).on("resize", function () {
+		if ($(window).width() > 991) {
+		  $("header").removeClass("active");
+		}
+	  });
+	});
+  </script>
+  <!--//MENU-JS-->
+<!-- disable body scroll which navbar is in active -->
+<script>
+$(function () {
+  $('.navbar-toggler').click(function () {
+    $('body').toggleClass('noscroll');
+  })
+});
+</script>
+<!-- disable body scroll which navbar is in active -->
+<!--theme switcher dark and light mode script-->
+<script>
+	const bodyElement = document.querySelector('body');
+	const themeToggle = document.querySelector('#themeToggle');
+	const darkModeMql = window.matchMedia('(prefers-color-scheme: dark)');
+  
+	const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : userPreference(darkModeMql);
+  
+	if (currentTheme) {
+	  bodyElement.classList.add(currentTheme);
+  
+	  if (currentTheme === 'dark') {
+		themeToggle.checked = true;
+	  }
+	}
+  
+	function userPreference(e) {
+	  if (e.matches) {
+		bodyElement.classList.add("dark");
+		return "dark"
+	  } else {
+		bodyElement.classList.remove("dark");
+		return ""
+	  }
+	}
+  
+	darkModeMql.addListener(userPreference);
+  
+	function themeSwitcher(e) {
+	  if (e.target.checked) {
+		bodyElement.classList.add('dark');
+		localStorage.setItem('theme', 'dark');
+	  } else {
+		bodyElement.classList.remove('dark');
+		localStorage.setItem('theme', '');
+	  }
+	}
+  
+	themeToggle.addEventListener('change', themeSwitcher);
+  </script>
+  <!--theme switcher dark and light mode script//-->
+
+
+
+<!-- breadcrumbs -->
+<section class="w3l-inner-banner-main">
+    <div class="about-inner blog-single editContent">
+        <div class="container">   
+        <div class="breadcrumbs-sub">
+            <ul class="breadcrumbs-custom-path">
+                <li class="right-side propClone"><a href="index.html" class="editContent">Home <span class="fa fa-angle-right" aria-hidden="true"></span></a> <p></li>
+                <li class="active editContent">
+                    Contact</li>
+            </ul>
+            </div>
+</div>
+</div>
+</section>
+<!-- breadcrumbs //-->
+<section class="w3l-contact-info-main" id="contact">
+    <div class="contact-sec	editContent">
+        <div class="container">
+
+
+            <div class="d-grid contact-view">
+
+                <div class="cont-details ">
+                    <h3 class="sub-title">Get in touch</h3> 
+                    <p class="para mt-3 mb-4"></p>
+                    
+                    <div class="cont-top ">
+                        <h6 class="mt-4 cont-left">Address:</h6>
+                        <div class="cont-right">
+                            <p class="para mt-1"> California, #32841 block,
+                                 #221DRS 75<br> West Rock,
+                                 Maple Building, UK.</p>
+                        </div>
+                    </div><div class="cont-top margin-up">
+                        <h6 class="mt-4 cont-left">Contact:</h6>
+                        <div class="cont-right">
+                            <p class="para mt-1"><a href="tel:+44 99 555 42">+123 45 67 89</a></p>
+                            <p class="para"><a href="tel:+111 45 67 99">+111 45 67 99</a></p>
+                        </div>
+                    </div>
+                    <div class="cont-top margin-up">
+                        <h6 class="mt-4 cont-left">Email:</h6>
+                        <div class="cont-right">
+                            <p class="para mt-1"><a href="mailto:example@mail.com" class="mail">Shake Hub@mail.com</a></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="map-content-9 pl-lg-5 ">
+                    <form action="//sendmail.w3layouts.com/submitForm" method="post">
+                        <div class="twice-two">
+                            <input type="text" class="form-control" name="w3lName" id="w3lName" placeholder="Name" required="">
+                            <input type="email" class="form-control" name="w3lSender" id="w3lSender" placeholder="Email" required="">
+                            <input type="text" class="form-control" name="w3lSubject" id="w3lSubject" placeholder="Subject" required="">
+                        </div>
+                        <textarea name="w3lMessage" class="form-control" id="w3lMessage" placeholder="Message" required=""></textarea>
+            
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-contact">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+                
+            
+        </div>
+    </div>
+</section>
+
+<!-- move top -->
+<button onclick="topFunction()" id="movetop" title="Go to top">
+	<span class="fa fa-level-up"></span>
+</button>
+<script>
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function () {
+		scrollFunction()
+	};
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			document.getElementById("movetop").style.display = "block";
+		} else {
+			document.getElementById("movetop").style.display = "none";
+		}
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+</script>
+<!-- /move top -->
+
+</body>
+
+</html>

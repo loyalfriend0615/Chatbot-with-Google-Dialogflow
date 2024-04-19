@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ShakeHub</title>
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+    <link href="//fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        
+		.w3l-hero-headers-9 .slide {
+    background: url(assets/images/straw.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    min-height: calc(100vh - 30px);
+    z-index: 0;
+    position: relative;
+    display: grid;
+    align-items: center;
+}
+    </style>
+</head>
+<body id="home">
+    <section class=" w3l-header-4">
+        <!--header-->
+        <header id="site-header">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark stroke">
+                    <h1><a class="navbar-brand" href="index.html">
+                        <span class="fa fa-book"></span> Shake Hub
+                    </a></h1>
+                    <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                        <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item mr-2">
+                                <a href="contact.html" class="btn btn-primary register d-lg-block btn-style">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mobile-position">
+                        <label class="theme-selector">
+                            <input type="checkbox" id="themeToggle">
+                            <i class="gg-sun"></i>
+                            <i class="gg-moon"></i>
+                        </label>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </section>
+    <script src="assets/js/jquery-3.3.1.min.js"></script> <!-- Common jquery plugin -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+        $(window).on("scroll", function () {
+          var scroll = $(window).scrollTop();
+          if (scroll >= 80) {
+            $("#site-header").addClass("nav-fixed");
+          } else {
+            $("#site-header").removeClass("nav-fixed");
+          }
+        });
+        $(".navbar-toggler").on("click", function () {
+          $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+          if ($(window).width() > 991) {
+            $("header").removeClass("active");
+          }
+          $(window).on("resize", function () {
+            if ($(window).width() > 991) {
+              $("header").removeClass("active");
+            }
+          });
+        });
+    </script>
+    <script>
+        $(function () {
+          $('.navbar-toggler').click(function () {
+            $('body').toggleClass('noscroll');
+          })
+        });
+    </script>
+    <script>
+        const bodyElement = document.querySelector('body');
+        const themeToggle = document.querySelector('#themeToggle');
+        const darkModeMql = window.matchMedia('(prefers-color-scheme: dark)');
+        const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : userPreference(darkModeMql);
+        if (currentTheme) {
+          bodyElement.classList.add(currentTheme);
+          if (currentTheme === 'dark') {
+            themeToggle.checked = true;
+          }
+        }
+        function userPreference(e) {
+          if (e.matches) {
+            bodyElement.classList.add("dark");
+            return "dark"
+          } else {
+            bodyElement.classList.remove("dark");
+            return ""
+          }
+        }
+        darkModeMql.addListener(userPreference);
+        function themeSwitcher(e) {
+          if (e.target.checked) {
+            bodyElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+          } else {
+            bodyElement.classList.remove('dark');
+            localStorage.setItem('theme', '');
+          }
+        }
+        themeToggle.addEventListener('change', themeSwitcher);
+    </script>
+    <section class="w3l-hero-headers-9" id="home">
+      <div class="slide header11" data-selector="header11">
+          <div class="container">
+              <div class="banner-text ">
+                  <h5 class=" ">WELCOME TO<br>  SHAKE HUB</h5>
+                  <p class=" ">where every sip is a journey through indulgent flavors and creamy delights. Explore our diverse menu crafted with the finest ingredients, designed to tantalize your taste buds and leave you craving for more. .</p>
+              </div>
+          </div>
+      </div>
+    </section>
+    <section class="w3l-covers-18">
+        <div class="covers-main editContent">
+            <div class="container">
+              <div class="main-titles-head ">
+                <h3 class="header-name">OUR SPECIALITY
+                </h3>
+            </div>
+                <div class="gallery-image row">
+                  <div class="col-lg-4 col-md-6">
+                    <img src="assets/images/apple.jpg" alt="product" class="img-responsive ">
+                    <div class="img-box">
+                    <h5 class="mb-2"><a href="about.html">Apple Shake</a></h5>
+                    <div class="blog-date"> 
+                    <p class="pos-date"><span class="fa fa-calendar mr-1"></span></p> <p class="pos-date"><span class="fa fa-eye mr-1"></span></p></div>
+                    <p class="para"></p>
+                    </div>
+                  </div>
+                  <div class=" col-lg-4 col-md-6 top-top2">
+                    <img src="assets/images/mango.jpg" alt="product" class="img-responsive ">
+                    <div class="img-box">
+                    <h5 class="mb-2"><a href="about.html">Mango Shake</a></h5>
+                    <div class="blog-date"> 
+                      <p class="pos-date"><span class="fa fa-calendar mr-1"></span></p> <p class="pos-date"><span class="fa fa-eye mr-1"></span> </p></div>
+                      <p class="para"></p>
+                  </div>
+                </div>
+                  <div class="col-lg-4 col-md-6 top-top">
+                    <img src="assets/images/coconut.jpg" alt="product" class="img-responsive ">
+                    <div class="img-box">
+                    <h5 class="mb-2"><a href="about.html">Coconut Shake</a></h5>
+                    <div class="blog-date"> 
+                      <p class="pos-date"><span class="fa fa-calendar mr-1"></span></p> <p class="pos-date"><span class="fa fa-eye mr-1"></span> </p></div>
+                      <p class="para"></p>
+                  </div>
+                  </div>
+				  <div class="col-lg-4 col-md-6 top-top">
+                    <img src="assets/images/sharja.jpg" alt="product" class="img-responsive ">
+                    <div class="img-box">
+                    <h5 class="mb-2"><a href="about.html">Sharja Shake</a></h5>
+                    <div class="blog-date"> 
+                      <p class="pos-date"><span class="fa fa-calendar mr-1"></span></p> <p class="pos-date"><span class="fa fa-eye mr-1"></span> </p></div>
+                      <p class="para"></p>
+                  </div>
+                  </div>
+				  <div class="col-lg-4 col-md-6 top-top">
+                    <img src="assets/images/grape.jpg" alt="product" class="img-responsive ">
+                    <div class="img-box">
+                    <h5 class="mb-2"><a href="about.html">Grape shake</a></h5>
+                    <div class="blog-date"> 
+                      <p class="pos-date"><span class="fa fa-calendar mr-1"></span></p> <p class="pos-date"><span class="fa fa-eye mr-1"></span> </p></div>
+                      <p class="para"></p>
+                  </div>
+                  </div>
+				  <div class="col-lg-4 col-md-6 top-top">
+                    <img src="assets/images/straw.jpg" alt="product" class="img-responsive ">
+                    <div class="img-box">
+                    <h5 class="mb-2"><a href="about.html">Strawberry Shake</a></h5>
+                    <div class="blog-date"> 
+                      <p class="pos-date"><span class="fa fa-calendar mr-1"></span></p> <p class="pos-date"><span class="fa fa-eye mr-1"></span> </p></div>
+                      <p class="para"></p>
+                  </div>
+                  </div>
+				  
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="w3l-footer-29-main">
+        <div class="footer-29 py-5 ">
+          <div class="container">
+            <div class="grid-col-4 footer-top-29">
+                <div class="footer-list-29 footer-1">
+                    <h2 class="footer-title-29">About Us</h2>
+                    <p class="para">At ShakeHub, we believe in the power of flavors to delight and energize. Our journey began with a simple idea: to create a place where every sip is an experience. With a passion for innovation and a commitment to quality, we craft each shake with the finest ingredients, ensuring every customer leaves with a smile.</p>
+                    <div class="main-social-footer-29">
+                        <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
+                        <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
+                        <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
+                        <a href="#google-plus" class="google-plus"><span class="fa fa-google-plus"></span></a>
+                        <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
+                    </div>
+                </div>
+                <div class="footer-list-29 footer-2">
+                    <ul>
+                        <h6 class="footer-title-29">Upcoming News</h6>
+                        <li><a href="#pages">Tender coconut Speciality</a>
+                        <h5><a href="#pages">by Admin</a></h5></li>
+                        <li><a href="#pages">Grand corridor Establishment</a><h5><a href="#pages">by Admin</a></h5></li>
+                        <li><a href="#pages">Committed to improving</a><h5><a href="#pages">by Admin</a></h5></li>
+                    </ul>
+                </div>
+                <div class="footer-list-29 footer-3">
+                    <div class="properties">
+                        <h6 class="footer-title-29">Contact Us</h6>
+                        <ul>
+                            <li><p><span class="fa fa-map-marker"></span>California, #32841 block,
+                                #221DRS 75 West Rock,
+                                Maple Building, UK.</p></li>
+                            <li><a href="tel:+7-800-999-800"><span class="fa fa-phone"></span> +(21)-255-999-8888</a></li>
+                            <li><a href="mailto:estate-mail@support.com" class="mail"><span class="fa fa-envelope-open-o"></span> Shakehub@mail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-list-29 footer-4">
+                    <ul>
+                        <h6 class="footer-title-29">Useful Links</h6>
+                        <li><a href="#url">Forums</a></li>
+                        <li><a href="#url">Our Staffs</a></li>
+                        <li><a href="#url">Upcoming Events</a></li>
+                        <li><a href="#url">Popular Moctales</a></li>
+                        <li><a href="#url">hot Shake</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class=" bottom-copies row">
+                <p class="copy-footer-29 col-lg-8">© 2020 Shake Hub. All rights reserved | Designed by <a href="//w3layouts.com">Aravind</a></p>
+                <ul class="list-btm-29 col-lg-4">
+                    <li><a href="#link">Privacy policy</a></li>
+                    <li><a href="#link">Terms of service</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </section>
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fa fa-level-up"></span>
+    </button>
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- /move top -->
+    <!-- Chat bot container -->
+
+
+   <div style="background-image: url('assets/images/straw.jpg'); /* Replace 'path/to/your/background-image.jpg' with the actual path to your background image */
+              background-size: cover; /* Ensure the background image covers the entire container */
+              background-position: center; /* Center the background image */
+              height: 100vh; /* Make the container full height of the viewport */
+              display: flex;
+              justify-content: center; /* Center the content horizontally */
+              align-items: center; /* Center the content vertically */">
+    <!-- Iframe with Dialogflow Bot -->
+    <iframe allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/a6f3248a-ba9b-4083-91e9-d83db0aa0bec" style="width: 350px; /* Set the width of the iframe */
+              height: 430px; /* Set the height of the iframe */
+              border: none; /* Remove border from the iframe */"></iframe>
+  </div>
+</body>
+</html>
