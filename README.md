@@ -1,5 +1,5 @@
       
-                                     #👇👇👇👇👇 IMPORTANT CONTENT READ FIRST  👇👇👇👇👇
+#READ FIRST
       
 
 This project made me develop and deploy chat bots on mobile Applications as well as web sites with the help of Google DialogFlow.To view my chat bot deployed in telegram
