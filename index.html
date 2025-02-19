@@ -282,17 +282,25 @@
     <!-- Chat bot container -->
 
 
-   <div style="background-image: url('assets/images/straw.jpg'); /* Replace 'path/to/your/background-image.jpg' with the actual path to your background image */
-              background-size: cover; /* Ensure the background image covers the entire container */
-              background-position: center; /* Center the background image */
-              height: 100vh; /* Make the container full height of the viewport */
-              display: flex;
-              justify-content: center; /* Center the content horizontally */
-              align-items: center; /* Center the content vertically */">
-    <!-- Iframe with Dialogflow Bot -->
-    <iframe allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/a6f3248a-ba9b-4083-91e9-d83db0aa0bec" style="width: 350px; /* Set the width of the iframe */
-              height: 430px; /* Set the height of the iframe */
-              border: none; /* Remove border from the iframe */"></iframe>
-  </div>
+   <div style="background-image: url('assets/images/straw.jpg'); 
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;">
+  
+  <!-- Dialogflow Messenger -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+    chat-icon="https://i.ibb.co/R98RxwV/SHAKE-HUB.jpg"
+    intent="WELCOME"
+    chat-title="SHAKEHUB--assistant"
+    agent-id="a6f3248a-ba9b-4083-91e9-d83db0aa0bec"
+    language-code="en">
+  </df-messenger>
+
+</div>
+
 </body>
 </html>
